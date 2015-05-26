@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y tomcat7
 ADD http://mirrors.jenkins-ci.org/war/latest/jenkins.war /var/lib/tomcat7/webapp/
 
 ENTRYPOINT ["/bin/bash"]
-CMD ["catalina.sh", "run"]
+CMD ["/etc/init.d/tomcat7", "start"]
 
 EXPOSE 8080
